@@ -1,4 +1,3 @@
-/*
 package com.project.pet.model;
 
 import jakarta.persistence.*;
@@ -16,4 +15,3 @@ public class Question {
     @Column(name = "question", unique = true, nullable = false)
     private String userName;
 }
-*/

@@ -1,4 +1,3 @@
-/*
 package com.project.pet.controllers;
 
 import com.project.pet.model.Question;
@@ -23,4 +22,3 @@ public class QuestionController {
         return questionRepository.findAll();
     }
 }
-*/
