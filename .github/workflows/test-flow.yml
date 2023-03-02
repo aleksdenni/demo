@@ -2,21 +2,13 @@ name: Maven Package
 
 on:
   push:
-    branches: ["master"]
-
+    branches: [ "master" ]
   pull_request:
-      branches: ["master"]
-
-  release:
-    types: [created]
+    branches: [ "master" ]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
 
     steps:
       - uses: actions/checkout@v3
@@ -25,8 +17,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'oracle'
-          server-id: github
-          settings-path: ${{ github.workspace }}
+          cache: maven
 
       - name: Build with Maven
         run: mvn -B package --file pom.xml
