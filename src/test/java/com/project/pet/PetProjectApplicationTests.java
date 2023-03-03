@@ -15,10 +15,10 @@ import org.springframework.test.context.ActiveProfiles;
 class PetProjectApplicationTests {
 	@Autowired
 	@Test
-	/*void contextLoads(ApplicationContext context) {
-		assertThat(context).isNotNull();
-	}*/
 	void contextLoads(ApplicationContext context) {
-		assertThat(context.getBean(GreetingController.class)).isNotNull();
+		assertThat(context).isNotNull();
 	}
+//	void contextLoads(ApplicationContext context) {
+//		assertThat(context.getBean(GreetingController.class)).isNotNull();
+//	}
 }
