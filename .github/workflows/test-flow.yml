@@ -30,7 +30,7 @@ jobs:
           host: ec2-3-72-60-197.eu-central-1.compute.amazonaws.com
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_KEY }}
-          source: /*.jar
+          source: target/*.jar
           target: /home/ubuntu
           script: whoami
 
