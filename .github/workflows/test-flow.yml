@@ -30,8 +30,8 @@ jobs:
           host: ec2-3-72-60-197.eu-central-1.compute.amazonaws.com
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_KEY }}
-          source: target/*.jar
-          target: /home/ubuntu/demo.jar
+          source: /*.jar
+          target: /home/ubuntu
           script: whoami
 
       - name: Connect to EC2
@@ -40,9 +40,8 @@ jobs:
           host: ec2-3-72-60-197.eu-central-1.compute.amazonaws.com
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_KEY }}
-          script: |
-            sudo cp demo.jar /opt/v1/demo.jar
-            java -jar /opt/v1 demo.jar
+          script:
+            ls -la
 
 
 #  sudo java stop java
