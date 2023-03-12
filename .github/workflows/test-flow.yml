@@ -34,7 +34,6 @@ jobs:
           target: /home/ubuntu
           script:
             echo "vse norm)"
-            fuser -k 8080/tcp
 
       - name: Connect to EC2
         uses: appleboy/ssh-action@master
