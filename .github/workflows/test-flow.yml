@@ -33,8 +33,7 @@ jobs:
           source: target/*.jar
           target: /home/ubuntu
           script:
-            DB_PASSWORD=${aws ssm get-parameters --names DB_PASSWORD --query Parameters[0].Value --with-decryption)
-            java -jar /home/ubuntu/target/demo-0.0.1-SNAPSHOT.jar
+            DB_PASSWORD=`aws ssm get-parameter --name DB_PASSWORD --query Parameter.Value --with-decryption --output text` java -jar /home/ubuntu/target/demo-0.0.1-SNAPSHOT.jar
 
       - name: Connect to EC2
         uses: appleboy/ssh-action@master
@@ -43,7 +42,7 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_KEY }}
           script:
-            ps;
+            lsof -i :8080;
 
 
 #  sudo systemctl stop demo
