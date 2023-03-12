@@ -1,4 +1,4 @@
-package com.project.pet.controllers;
+package com.project.pet.controller;
 
 import java.util.concurrent.atomic.AtomicLong;
 
