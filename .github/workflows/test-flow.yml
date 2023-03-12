@@ -41,6 +41,8 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_KEY }}
           script: |
-            sudo systemctl stop demo
-            sudo cp /home/ubuntu/demo.jar /opt/demo/demo.jar
-            sudo systemctl start demo
+            ls -la
+
+#  sudo java stop java
+#  sudo cp /home/ubuntu/demo.jar /opt/demo/demo.jar
+# sudo systemctl start demo
