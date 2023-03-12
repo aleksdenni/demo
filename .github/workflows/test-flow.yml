@@ -41,7 +41,7 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_KEY }}
           script: |
-            mv demo.jar /opt/v1/demo.jar
+            sudo mv demo.jar /opt/v1/demo.jar
             java -cp /opt/v1/demo.jar
 
 
