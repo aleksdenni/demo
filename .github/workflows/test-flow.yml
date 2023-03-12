@@ -32,8 +32,8 @@ jobs:
           key: ${{ secrets.EC2_KEY }}
           source: target/*.jar
           target: /home/ubuntu
-          script: |
-            export DB_PASSWORD=${aws ssm get-parameters --names DB_PASSWORD --query Parameters[0].Value --with-decryption) 
+          script:
+            DB_PASSWORD=${aws ssm get-parameters --names DB_PASSWORD --query Parameters[0].Value --with-decryption)
             java -jar /home/ubuntu/target/demo-0.0.1-SNAPSHOT.jar
 
       - name: Connect to EC2
