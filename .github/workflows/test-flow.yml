@@ -45,7 +45,7 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_KEY }}
           script:
-            sudo systemctl stop demo
+            echo the end;
 
 
 #  sudo systemctl stop demo
