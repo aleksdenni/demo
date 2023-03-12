@@ -34,8 +34,6 @@ jobs:
           target: /home/ubuntu
           script: |
             whoami
-            DB_PASSWORD= aws ssm get-parameter --name DB_PASSWORD --query Parameter.Value --output text
-            export DB_PASSWORD=$DB_PASSWORD
             java -jar /home/ubuntu/target/demo-0.0.1-SNAPSHOT.jar
 
       - name: Connect to EC2
@@ -45,7 +43,7 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_KEY }}
           script:
-            echo the end;
+            echo finish;
 
 
 #  sudo systemctl stop demo
