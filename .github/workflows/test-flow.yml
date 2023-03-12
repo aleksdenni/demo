@@ -43,7 +43,7 @@ jobs:
           key: ${{ secrets.EC2_KEY }}
           script:
             sudo su
-            DB_PASSWORD=`aws ssm get-parameter --name DB_PASSWORD --region eu-central-1 --query Parameter.Value --with-decryption --output text` java -jar /home/ubuntu/target/demo-0.0.1-SNAPSHOT.jar
+            DB_PASSWORD=`aws ssm get-parameter --name DB_PASSWORD --query Parameter.Value --with-decryption --output text` java -jar /home/ubuntu/target/demo-0.0.1-SNAPSHOT.jar
 
 #  sudo systemctl stop demo
 #  sudo cp /home/ubuntu/target/demo-0.0.1-SNAPSHOT.jar /opt/demo/demo.jar
