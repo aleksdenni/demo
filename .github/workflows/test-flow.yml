@@ -42,7 +42,7 @@ jobs:
           key: ${{ secrets.EC2_KEY }}
           script: |
             sudo mv demo.jar /opt/v1/demo.jar
-            java -cp /opt/v1 demo
+            java -jar -cp /opt/v1 demo.jar
 
 
 #  sudo java stop java
