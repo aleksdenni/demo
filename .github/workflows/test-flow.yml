@@ -41,10 +41,11 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_KEY }}
           script: |
-            sudo cp /home/ubuntu/demo.jar /opt/demo/demo.jar
+            cd ../..
             ls -la
-            cd ../../opt/demo
+            cp /home/ubuntu/demo.jar /opt/demo/demo.jar
             ls -la
+
 
 #  sudo java stop java
 #  sudo cp /home/ubuntu/demo.jar /opt/demo/demo.jar
